@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo</title>
+<link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Banco de dados Demo</h1>
+        </div>
+    </header>
+    <span>
+        <main>
+        <div class="container">
+            <!-- Form for adding a new problem -->
+            <form id="addForm" style="display: block;">
+                <!-- Form fields -->
+                <input type="text" id="title" placeholder="Título" required>
+                <textarea id="description" placeholder="Descrição" required></textarea>
+                <textarea id="recommendation" placeholder="Recomendação técnica" required></textarea>
+                <button type="submit" id="addButton">Adicionar Patologia</button>
+            </form>
+    
+            <!-- Edit buttons (initially hidden) -->
+            <div id="editButtons" style="display: none;">
+                <button onclick="saveEditedProblem()">Salvar</button>
+                <button onclick="cancelEdit()">Cancelar</button>
+            </div>
+    
+            <!-- Search input -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar">
+                <button onclick="searchProblems()">Pesquisar</button>
+                <button onclick="clearSearch()">Limpar</button>
+            </div>
+    
+            <!-- Display area for problems -->
+            <ul id="problemList"></ul>
+    
+            <!-- Buttons for generating random problems and deleting all problems -->
+            <div class="button-container">
+                <button onclick="generateRandomProblems()">Gerar Patologia Aleatórias</button>
+                <button onclick="deleteAllProblems()">Excluir Todas as Patologias</button>
+            </div>
+        </div>
+    </main>    
+</span>
+<script src="script.js"></script> <!-- Link to external JavaScript file -->
+
+</body>
+</html>
